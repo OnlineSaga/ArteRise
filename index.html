@@ -84,21 +84,39 @@
                     <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
-            <div class="service">
+            <div class="service service-1">
                 <!-- <div class="service_img">
                     <img src="css/static/ai.jpg" alt="Artificial Intelligence" class="service_img--img">
                 </div> -->
                 <div class="service_desc">
-                    <h5 class="service_desc--head">Artificial Intelligence</h5>
+                    <h5 class="service_desc--head">I.T. Consultation</h5>
                     <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
-            <div class="service">
+            <div class="service service-2">
                 <!-- <div class="service_img">
                     <img src="css/static/ai.jpg" alt="Artificial Intelligence" class="service_img--img">
                 </div> -->
                 <div class="service_desc">
-                    <h5 class="service_desc--head">Artificial Intelligence</h5>
+                    <h5 class="service_desc--head">Software Development</h5>
+                    <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="service service-3">
+                <!-- <div class="service_img">
+                    <img src="css/static/ai.jpg" alt="Artificial Intelligence" class="service_img--img">
+                </div> -->
+                <div class="service_desc">
+                    <h5 class="service_desc--head">Blockchain Applications</h5>
+                    <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <div class="service service-4">
+                <!-- <div class="service_img">
+                    <img src="css/static/ai.jpg" alt="Artificial Intelligence" class="service_img--img">
+                </div> -->
+                <div class="service_desc">
+                    <h5 class="service_desc--head">Digital Marketing</h5>
                     <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
@@ -141,13 +159,27 @@
         </section>
         <section class="contact">
             <h5 class="contact_head">Get in touch</h5>
+            <div class="contact_info">
+                <h5 class="contact_info--head">Contact Information</h5>
+                <p class="contact_info--desc">Fill up the form and our team will get to you in 24 hours.</p>
+                <div class="contact_info--cell"></div>
+                <div class="contact_info--email"></div>
+            </div>
             <form action="" class="contact_form">
-                <input class="contact_form--input"  type="text" placeholder="Enter your name">
-                <input class="contact_form--input"  type="email" placeholder="Enter your email">
-                <textarea class="contact_form--input" name="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="name">Name</label>
+                    <input class="contact_form--input" type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="email">Email</label>
+                    <input class="contact_form--input" name="email" type="email" placeholder="Enter your email">
+                </div>
+                <div id="contact_input--message" class="contact_form--fields">
+                    <label class="contact_form--label" for="message">Message</label>
+                    <textarea class="contact_form--input" name="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                </div>
                 <button type="submit" class="contact_form--btn">Submit</button>
             </form>
-            <div class="contact_img"></div>
         </section>
     </main>
     <footer>

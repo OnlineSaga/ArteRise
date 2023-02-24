@@ -251,7 +251,8 @@ header {
     justify-content: center;
     flex-direction: column;
     font-family: var(--font--);
-    background-color: var(--primary-color--);
+    /* background-color: var(--primary-color--); */
+    background-color: var(--secondary-color--);
     gap: 1rem;
 }
 
@@ -264,14 +265,16 @@ header {
 
 .services_head {
     font-size: 2rem;
-    color: var(--white--);
+    /* color: var(--white--); */
+    color: var(--black--);
     font-weight: 800;
 }
 
 .services_body {
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--l-white--);
+    /* color: var(--l-white--); */
+    color: var(--black--);
 }
 
 .service {
@@ -281,7 +284,23 @@ header {
     background-image: url(static/ai.jpg);
     background-repeat: no-repeat;
     background-size: 46rem 100%;
-    height: 30rem;
+    height: 28rem;
+}
+
+.service-1 {
+    background-image: url(static/consultation.jpg);
+}
+
+.service-2 {
+    background-image: url(static/software.jpg);
+}
+
+.service-3 {
+    background-image: url(static/blockchain.jpg);
+}
+
+.service-4 {
+    background-image: url(static/digitalmarketing.jpg);
 }
 
 .service:nth-child(odd) {
@@ -297,7 +316,8 @@ header {
     width: 35%;
     height: fit-content;
     padding: 2rem;
-    background-color: var(--secondary-color--);
+    /* background-color: var(--secondary-color--); */
+    background-color: var(--primary-color--);
     box-shadow: rgba(38, 38, 39, 0.25) 5px 5px 10px;
     display: flex;
     flex-direction: column;
@@ -313,13 +333,15 @@ header {
 
 .service_desc--head {
     font-size: 1.5rem;
-    color: var(--primary-color--);
+    /* color: var(--primary-color--); */
+    color: var(--secondary-color--);
     font-weight: 600;
 }
 
 .service_desc--desc {
     font-size: 0.9rem;
-    color: var(--l-black--);
+    /* color: var(--l-black--); */
+    color: var(--l-white--);
 }
 
 
@@ -333,13 +355,13 @@ header {
     /* align-items: center; */
     padding: 3rem 3rem;
     gap: 2rem;
-    background-color: var(--secondary-color--);
+    background-color: var(--primary-color--);
     font-family: var(--font--);
     overflow-x: hidden;
 }
 
 .testimonial_text {
-    color: var(--primary-color--);
+    color: var(--white--);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -347,7 +369,7 @@ header {
 }
 
 .testimonials_head {
-    color: var(--black--);
+    color: var(--secondary-color--);
     font-size: 2.1rem;
     font-weight: 800;
 }
@@ -383,7 +405,7 @@ header {
 }
 
 .testimonial_quote {
-    width: 4.5rem;
+    width: 4rem;
     opacity: 0.7;
     align-self: flex-start;
     /* filter: invert(1); */
@@ -424,7 +446,7 @@ header {
 .contact {
     display: grid;
     padding: 3rem 3rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr 5fr;
     font-family: var(--font--);
     /* background-color: var(--secondary-color--); */
@@ -440,18 +462,37 @@ header {
 }
 
 .contact_form {
-    display: flex;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: column;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
+}
+
+.contact_form--fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contact_form--label {
+    font-family: var(--font--);
+    padding: 0 0.5rem;
+    font-size: 10;
 }
 
 .contact_form--input {
     border: none;
-    padding: 0.7rem;
+    padding: 0.7rem 0.5rem;
     color: var(--white--);
     border-bottom: 2px solid var(--primary-color--);
     background-color: transparent;
+    font-family: var(--font--);
+}
+
+#contact_input--message {
+    grid-column: 1/3;
 }
 
 .contact_form--input:active {
@@ -469,6 +510,26 @@ header {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color--);
+    margin-right: 1rem;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    gap: 0.5rem;
+}
+
+.contact_info--head {
+    color: var(--white--);
+    font-size: 1.5rem;
+}
+
+.contact_info--desc {
+    color: var(--l-white--);
+    font-size: 1rem;
 }
 
 
