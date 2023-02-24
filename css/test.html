@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+        position: relative;
+        height: 100rem; /* set the height of the parent element */
+        overflow: auto; /* add scroll when content overflows */
+        }
+
+        .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(static/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 24px;
+        overflow: hidden; /* hide content that overflows */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="background"></div>
+    <div class="foreground">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique neque non felis fringilla, non iaculis ipsum posuere. Suspendisse viverra lorem velit, sit amet finibus augue congue nec. Nulla vitae mi ullamcorper, viverra augue a, sodales dolor. Sed pulvinar felis in neque imperdiet feugiat.</p>
+    </div>
+    </div>      
+</body>
+<script>
+    const foreground = document.querySelector(".foreground");
+    const background = document.querySelector(".background");
+
+    window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset;
+    const offset = foreground.offsetTop;
+    const height = foreground.offsetHeight;
+    const opacity = (scrollTop - offset) / height;
+
+    background.style.transform = `translateY(${scrollTop}px)`;
+    foreground.style.opacity = 1 - opacity;
+    });
+</script>
+</html>
