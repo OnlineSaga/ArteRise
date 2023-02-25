@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --primary-color--: #2f455c;
     --secondary-color--: #fbaf41;
@@ -15,6 +10,70 @@
     --d-gray--: rgb(100, 100, 100);
     --font--: 'Figtree', sans-serif;
     scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.small-cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fbad41da;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.big-cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #fbad4163;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color--);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font--);
+    transition: all 500ms ease-in-out;
+    gap: 1rem;
+}
+
+.overlay-logo {
+    opacity: 0;
+    width: 10rem;
+}
+
+.overlay-head {
+    font-size: 3rem;
+    opacity: 0;
+    color: var(--secondary-color--);
+}
+
+.overlay-subhead {
+    font-size: 1.2rem;
+    color: var(--white--);
 }
 
 header {
@@ -72,7 +131,7 @@ header {
 }
 
 .hero {
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     justify-content: space-between;
@@ -101,7 +160,7 @@ header {
 }
 
 .hero_text--cta {
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     width: fit-content;
     padding: 1rem 2.2rem;
     border: none;
@@ -129,6 +188,10 @@ header {
 .current-slide {
     width: 12rem;
     height: 16rem;
+}
+
+.hero_img--img {
+    width: 50rem;
 }
 
 
@@ -267,14 +330,14 @@ header {
     font-size: 2rem;
     /* color: var(--white--); */
     color: var(--black--);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .services_body {
     font-size: 1.2rem;
     font-weight: 400;
     /* color: var(--l-white--); */
-    color: var(--black--);
+    color: var(--l-black--);
 }
 
 .service {
@@ -285,6 +348,8 @@ header {
     background-repeat: no-repeat;
     background-size: 46rem 100%;
     height: 28rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 .service-1 {
@@ -305,11 +370,6 @@ header {
 
 .service:nth-child(odd) {
     background-position: right;
-}
-
-.service_img--img {
-    width: 46rem;
-    height: 100%;
 }
 
 .service_desc {
@@ -447,8 +507,8 @@ header {
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr 7fr;
     font-family: var(--font--);
-    /* background-color: var(--secondary-color--); */
-    background-color: var(--white--);
+    background-color: var(--secondary-color--);
+    /* background-color: var(--white--); */
     gap: 1rem;
 }
 
@@ -456,7 +516,7 @@ header {
     grid-column: 1/3;
     font-size: 2rem;
     font-weight: 800;
-    color: var(--primary-color--);
+    color: var(--black--);
 }
 
 .contact_form {
@@ -500,8 +560,10 @@ header {
 
 .contact_form--btn {
     margin-top: 1rem;
-    width: 35%;
+    width: 10rem;
+    /* background-color: var(--secondary-color--); */
     background-color: var(--primary-color--);
+    /* color: var(--black--); */
     color: var(--white--);
     border: none;
     border-radius: 0.5rem;
@@ -514,6 +576,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color--);
+    /* background-color: var(--white--); */
     /* background-color: var(--secondary-color--); */
     margin-right: 1rem;
     border-radius: 1rem;
@@ -538,12 +601,18 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--white--);
+    color: var(--l-white--);
     margin-top: 1rem;
 }
 
-.info_email--img, .info_contact--img  {
+.info_email--img {
     width: 1.4rem;
+    /* filter: invert(1); */
+}
+
+.info_contact--img {
+    width: 1.7rem;
+    /* filter: invert(1); */
 }
 
 .contact_info--socials {
@@ -655,15 +724,18 @@ hr {
 
 /* Responsive */
 
-@media (max-width: 600px)  {
+@media (max-width: 700px)  {
+    .big-cursor, .small-cursor {
+        display: none;
+    }
 
     .nav-links {
         display: none !important;
     }
 
     .hero {
-    grid-template-columns: 1fr;
-    padding: 3rem 2rem;
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
     }
 
     .hero_text {
@@ -696,9 +768,17 @@ hr {
         gap: 3rem;
     }
 
-    .service_img--img {
-        width: 15rem;
-        height: 5rem;
+    .services {
+        padding: 3rem 2rem;
+    }
+    
+    .service {
+        height: fit-content !important;
+    }
+
+    .service_desc {
+        width: 100%;
+        position: static;
     }
 
     .testimonials {
@@ -718,8 +798,27 @@ hr {
     }
 
     .contact {
-        grid-template-columns: 1fr;
         padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact_form {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact_info {
+        padding: 1.5rem;
+        gap: 1rem;
+        display: none;
+    }
+
+    .contact_info--socials {
+        width: 40%;
+        margin-top: 3rem;
     }
 
     footer {
@@ -741,6 +840,63 @@ hr {
 
     .links_head, .social_head, .footer_contact--head {
         margin-bottom: 0.4rem;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .big-cursor, .small-cursor {
+        display: none;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        gap: 3rem;
+    }
+
+    .hero_text {
+        padding: 1rem 0 2rem 0;
+        align-items: center;
+    }
+
+    .hero_slider {
+        padding: 2rem 0;
+    }
+
+    .technologies {
+        padding: 1rem 2rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .about_img {
+        display: none !important;
+    }
+
+    .service {
+        background-size: 35rem 100%;
+        height: 22rem;
+    }
+
+    .service_desc {
+        left: 60%;
+        top: 30%;
+    }
+
+    .service:nth-child(odd) > .service_desc {
+        left: 10%;
+    }
+
+    .testimonial:nth-child(n+3) {
+        display: none !important;
     }
     
 }
