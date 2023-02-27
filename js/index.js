@@ -42,6 +42,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // Hide the overlay after a delay
     setTimeout(() => {
         overlay.style.opacity = '0';
-        // overlay.style.display = 'none';
     }, 2500);
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 3000);
 });
+
+
+function hamburger(x) {
+    x.classList.toggle("change");
+}
