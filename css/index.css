@@ -87,9 +87,14 @@ a, button {
 }
 
 header {
-    background-color: var(--primary-color--);
+    /* background-color: var(--primary-color--); */
     display: flex;
     flex-direction: column;
+    background-image: url(static/hero-bg-2.jpg);
+    background-size: 100% 100%;
+    object-fit: fill;
+    background-position: 50% 60%;
+    min-height: 50rem;
 }
 
 .navBar {
@@ -168,8 +173,7 @@ header {
 
 .hero {
     padding: 3rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -180,13 +184,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: var(--white--);
     font-family: var(--font--);
     gap: 1.5rem;
+    text-align: center;
 }
 
 .hero_text--head {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -195,16 +201,36 @@ header {
     color: var(--l-white--);
 }
 
-.hero_text--cta {
+.hero_ctas {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero_text--cta:nth-child(odd) {
     margin-top: 2rem;
     width: fit-content;
     padding: 1rem 2.2rem;
     border: none;
     font-weight: 600;
     font-size: 16;
+    /* color: var(--white--); */
     color: var(--white--);
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: var(--secondary-color--);
+}
+
+.hero_text--cta:nth-child(even) {
+    margin-top: 2rem;
+    width: fit-content;
+    padding: 1rem 2.2rem;
+    border: none;
+    /* border: 2px solid var(--secondary-color--); */
+    font-weight: 600;
+    font-size: 16;
+    color: var(--secondary-color--);
+    border-radius: 2rem;
+    background-color: var(--white--);
+    /* background-color: transparent; */
 }
 
 .hero_slider {
@@ -227,7 +253,7 @@ header {
 }
 
 .hero_img--img {
-    width: 50rem;
+    width: 25rem;
 }
 
 
