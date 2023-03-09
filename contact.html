@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Get In Touch | ArteRise</title>
+</head>
+
+<body>
+    <div class="small-cursor"></div>
+    <div class="big-cursor"></div>
+    <div class="overlay">
+        <img src="css/static/logo.png" class="overlay-logo" alt="">
+        <h1 class="overlay-head">ArteRise</h1>
+        <!-- <p class="overlay-subhead">Artistic approach to technology</p> -->
+    </div>
+    <header>
+        <nav class="navBar">
+            <div class="nav-logo" type="button" onclick="location.href=''">
+                <img src="css/static/logo.png" alt="Logo"  class="logo">
+            </div>
+            <div class="nav-links">
+                <a href="./" class="link">Home</a>
+                <span class="link_dropdown">
+                    Services <i class="fa fa-caret-down"></i>
+                    <div class="link_dropdown--options">
+                        <a href="./services.html" class="link">Services</a>
+                        <a href="./services.html" class="link">Services</a>
+                        <a href="./services.html" class="link">Services</a>
+                    </div>
+                </span>
+                <button class="btn" onclick="location.href='contact.html'" >Contact</button>
+            </div>
+            <div class="nav-hamburger" onclick="hamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero_text">
+                <h1 class="hero_text--head">Everything great starts here!</h1>
+                <p class="hero_text--body">Leave us a message and our team will respond to you within 24 hours Lorem ipsum dolor sit amet consectetur.</p>
+                <button class="hero_text--cta" onclick="location.href='#contact'" >Get in touch</button>
+                <!-- <span class="hero_ctas">
+                    <button class="hero_text--cta">Get in touch</button>
+                </span> -->
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="contact" id="contact">
+            <h5 class="contact_head">Let's get started!</h5>
+            <form action="" class="contact_form">
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="f-name">First name</label>
+                    <input class="contact_form--input" type="text" name="f-name" placeholder="Saqib">
+                </div>
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="l-name">Last name</label>
+                    <input class="contact_form--input" type="text" name="l-name" placeholder="Rasool">
+                </div>
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="email">Email</label>
+                    <input class="contact_form--input" name="email" type="email" placeholder="example@abc.com">
+                </div>
+                <div class="contact_form--fields">
+                    <label class="contact_form--label"  for="phone">Phone number</label>
+                    <input class="contact_form--input" name="phone" type="tel" placeholder="0123 456789">
+                </div>
+                <div id="contact_input--message" class="contact_form--fields">
+                    <label class="contact_form--label" for="message">Message</label>
+                    <textarea class="contact_form--input" name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="contact_form--btn">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_top">
+            <div class="footer_about">
+                <img src="css/static/logo.png" alt="Logo"  class="footer_about--logo"  type="button" onclick="location.href=''">
+                <div class="footer_about--slogan">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat aut minima doloremque
+                    voluptatibus deserunt
+                </div>
+            </div>
+            <div class="footer_links">
+                <h5 class="links_head">Useful Links</h5>
+                <a class="footer_link" href="./">Home</a>
+                <a class="footer_link" href="services.html">Services</a>
+                <a class="footer_link" href="contact.html">Contact</a>
+            </div>
+            <div class="footer_social">
+                <h5 class="social_head">Follow Us</h5>
+                <div class="social_icons">
+                    <img class="social_icon" src="css/static/facebook.png" alt="">
+                    <img class="social_icon" src="css/static/instagram.png" alt="">
+                    <img class="social_icon" src="css/static/whatsapp.png" alt="">
+                </div>
+            </div>
+            <div class="footer_contact">
+                <h5 class="footer_contact--head">Contact Us</h5>
+                <p>0330-8496238</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer_bottom">
+            <p class="copyrights">&#169; 2022 ArteRise, All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="js/index.js"></script>
+
+</html>

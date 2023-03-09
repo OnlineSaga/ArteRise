@@ -7,6 +7,7 @@
     <title>Arte Rise | Artistic approach to technology</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="js/index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="small-cursor"></div>
@@ -22,9 +23,9 @@
                 <img src="css/static/logo.png" alt="Logo"  class="logo">
             </div>
             <div class="nav-links">
-                <a href="" class="link">Home</a>
-                <a href="" class="link">Services</a>
-                <button class="btn">Contact</button>
+                <a href="./" class="link">Home</a>
+                <a href="./services.html" class="link">Services</a>
+                <button class="btn" onclick="location.href='contact.html'" >Contact</button>
             </div>
             <div class="nav-hamburger" onclick="hamburger(this)">
                 <div class="bar1"></div>
@@ -36,10 +37,10 @@
             <div class="hero_text">
                 <h1 class="hero_text--head">Artistic approach to technology</h1>
                 <p class="hero_text--body">We approach technology artistically and help your business thrive with innovation and cutting edge technology. We are here to provide you the best solutions ever possible</p>
-                <span class="hero_ctas">
+                <button class="hero_text--cta" onclick="location.href='contact.html'" >Get in touch</button>
+                <!-- <span class="hero_ctas">
                     <button class="hero_text--cta">Get in touch</button>
-                    <button class="hero_text--cta">Get in touch</button>
-                </span>
+                </span> -->
             </div>
         </section>
     </header>
@@ -47,7 +48,7 @@
         <section class="about">
             <div class="about_text">
                 <h1 class="about_text--head">Why ArteRise?</h1>
-                <p class="about_text--body">With ArteRise, you can now grow your sales in an unprecedented fashion through services such as following</p>
+                <p class="about_text--body">With our expert consultancy services and cutting-edge technology, we help businesses thrive and succeed in today's digital age.</p>
                 <div class="about_text--features">
                     <div class="feature"><img src="css/static/idea-y.png" alt="Best solutions" class="feature_img"><p class="feature_name">Best Solutions</p><p class="feature_desc">Our staff is trained to give
                         optimal ideas for you</p></div>
@@ -65,20 +66,6 @@
                 <img src="css/static/about.jpg" class="about_img--img" alt="">
             </div>
         </section>
-        <!-- <section class="technologies">
-            <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
-            <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
-        </section> -->
         <section class="services">
             <div class="services_desc">
                 <h3 class="services_head">How can we help</h3>
@@ -129,8 +116,22 @@
                     <p class="service_desc--desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita odit voluptas dicta culpa placeat magnam fugit dolorem necessitatibus neque Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
-            </div>
-        </section>
+        </div>
+    </section>
+    <section class="technologies">
+        <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/vuejs.png" alt="Vue JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/nodejs.png" alt="Node JS" class="technology_img"></div>
+        <div class="technology"><img src="css/static/react.png" alt="React JS" class="technology_img"></div>
+    </section>
         <section class="testimonials">
             <div class="testimonial_text">
                 <h5 class="testimonials_head">Our Clients</h5>
@@ -163,9 +164,10 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <!-- <section class="contact">
             <h5 class="contact_head">Get in touch</h5>
             <div class="contact_info">
+                <img class="contact_img" src="css/static/hero-img-11.png" alt="">
                 <h5 class="contact_info--head">Contact Information</h5>
                 <p class="contact_info--desc">Fill up the form and our team will get to you in 24 hours.</p>
                 <div class="contact_info--contact">
@@ -197,7 +199,7 @@
                 </div>
                 <button type="submit" class="contact_form--btn">Submit</button>
             </form>
-        </section>
+        </section> -->
     </main>
     <footer>
         <div class="footer_top">
@@ -210,9 +212,9 @@
             </div>
             <div class="footer_links">
                 <h5 class="links_head">Useful Links</h5>
-                <a class="footer_link" href="">Home</a>
-                <a class="footer_link" href="">Features</a>
-                <a class="footer_link" href="">Services</a>
+                <a class="footer_link" href="./">Home</a>
+                <a class="footer_link" href="services.html">Services</a>
+                <a class="footer_link" href="contact.html">Contact</a>
             </div>
             <div class="footer_social">
                 <h5 class="social_head">Follow Us</h5>
