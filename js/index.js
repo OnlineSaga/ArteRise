@@ -52,3 +52,17 @@ window.addEventListener('DOMContentLoaded', () => {
 function hamburger(x) {
     x.classList.toggle("change");
 }
+
+
+const linksAndButtons = document.querySelectorAll('a, button');
+
+for (let i = 0; i < linksAndButtons.length; i++) {
+  linksAndButtons[i].addEventListener('mouseover', function() {
+    bigCursor.classList.add('big-cursor-hover');
+  });
+
+  linksAndButtons[i].addEventListener('mouseout', function() {
+    bigCursor.classList.remove('big-cursor-hover');
+  });
+}
+

@@ -56,6 +56,12 @@ button:hover {
     transform: translate(-50%, -50%);
     z-index: 9998;
     pointer-events: none;
+    transition: width 200ms ease, height 200ms ease;
+}
+
+.big-cursor-hover {
+    width: 110px !important;
+    height: 110px !important;
 }
 
 .overlay {
