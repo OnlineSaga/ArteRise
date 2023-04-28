@@ -385,12 +385,21 @@ header {
     margin-top: 2rem;
     width: fit-content;
     padding: 1rem 2.2rem;
-    border: none;
+    border: 2px solid var(--secondary-color--);
     font-weight: 600;
     font-size: 16;
     color: var(--white--);
     border-radius: 0.5rem;
     background-color: var(--secondary-color--);
+    transition: all 300ms ease-in-out;
+
+}
+
+.about_text--btn:hover {
+    border: 2px solid var(--secondary-color--);
+    color: var(--secondary-color--);
+    background-color: transparent;
+
 }
 
 .about_img {
@@ -526,6 +535,43 @@ header {
 
 .service_desc--link:hover {
     gap: 20px;
+}
+
+
+/* Contact Divider */
+
+.contact-div {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    align-items: center;
+    padding: 3rem 4rem;
+    background-color: var(--primary-color--);
+    position: relative;
+}
+
+.contact-div_text {
+    color: var(--white--);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--font--);
+}
+
+.contact-div_cta {
+    width: 12rem;
+    padding: 1rem 2.1rem;
+    border: 2px solid var(--secondary-color--);
+    font-weight: 600;
+    font-size: 16;
+    color: var(--white--);
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color--);
+    transition: all 300ms ease-in-out;
+}
+
+.contact-div_cta:hover {
+    color: var(--secondary-color--);
+    background-color: transparent;
 }
 
 
@@ -928,6 +974,11 @@ hr {
         position: static;
     }
 
+
+    .contact {
+        display: none;
+    }
+
     .testimonials {
         padding: 3rem 2rem;
     }
@@ -1022,6 +1073,10 @@ hr {
 
     .technologies {
         padding: 1rem 2rem;
+    }
+
+    .contact {
+        display: none;
     }
 
     .about {
